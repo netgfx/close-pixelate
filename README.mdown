@@ -53,7 +53,7 @@ The function accepts an array of objects. Each object holds a set of options.
 - `size` : The size in pixels of the rendered pixel. Optional. Defaults to value of `resolution`.
 - `offset` : Offset in pixels. Optional. Defaults to `0`. Can be a single value `15` for a diagonal offset, or an array or object for X/Y pairs: `[ 15, 5 ]` or `{ x: 15, y: 5 }`.
 - `alpha` : A decimal value for the opacity of the rendering. Optional. Defaults to `1`.
-- `video` : Boolean value (true if we want to pixelate video) ** Required if we want to use video **
+- `video` : Boolean value (true if we want to pixelate video) **Required if we want to use video**
 - `videoW`: The desired video width
 - `videoH`: The desired video height
 
