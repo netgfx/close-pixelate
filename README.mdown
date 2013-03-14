@@ -77,3 +77,22 @@ myPixelation.renderClosePixels({
   resolution: 48, alpha: 0.5
 });
 ```
+
+## Example using video
+
+```js
+function draw() {
+ 
+    if(v.paused || v.ended){ 
+    	return false;
+   	}
+    
+    var myPixelation = new ClosePixelation( video, [
+  		 { resolution : 8,shape:'circle', video:true, videoW:w, videoH:h }
+    ]);
+
+    canvas.putImageData(myPixelation,0,0);
+    window.requestAnimationFrame(draw);
+    //setTimeout(draw,20);  // alternative
+}
+```
