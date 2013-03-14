@@ -9,6 +9,7 @@ Inspired by American portrait painter Chuck Close, this script converts an image
 
  - [David DeSandro](http://desandro.com)
  - [John Schulz](http://twitter.com/jfsiii)
+ - Video extension by [Michael Dobekidis](http://www.netgfx.com)
 
 ## Example Code
 
@@ -30,6 +31,13 @@ function init() {
 window.addEventListener( 'load', init, false);
 ```
 
+For video manipulation
+``` js
+ var myPixelation = new ClosePixelation( v, [
+   	{ resolution : 8,shape:'circle', video:true, videoW:w, videoH:h }
+  ]);
+```
+
 Each set of options is an object representing one re-rendering the original image.
 
 The first set of options, `{ resolution : 24 }` directs the script to render a big square pixel every 24 actual pixels. The script uses the exact color value of the one single actual pixel in the center of the big square pixel. 
@@ -45,6 +53,9 @@ The function accepts an array of objects. Each object holds a set of options.
 - `size` : The size in pixels of the rendered pixel. Optional. Defaults to value of `resolution`.
 - `offset` : Offset in pixels. Optional. Defaults to `0`. Can be a single value `15` for a diagonal offset, or an array or object for X/Y pairs: `[ 15, 5 ]` or `{ x: 15, y: 5 }`.
 - `alpha` : A decimal value for the opacity of the rendering. Optional. Defaults to `1`.
+- `video` : Boolean value (true if we want to pixelate video) ** Required if we want to use video **
+- `videoW`: The desired video width
+- `videoH`: The desired video height
 
 ## Constructor and methods
 
